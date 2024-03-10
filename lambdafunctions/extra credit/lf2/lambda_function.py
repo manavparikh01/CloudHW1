@@ -16,8 +16,8 @@ cuisine_list = ['indian', 'thai', 'mediterranean', 'chinese', 'italian','japanes
 
 def lambda_handler(event, context):
     region = "us-east-1"
-    access_key = "AKIAXYKJTRFYPMCPHQAJ"
-    secret_key = "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"
+    access_key = "access_key"
+    secret_key = "secret_key"
     dynamodb_state = boto3.resource('dynamodb', region_name=region, aws_access_key_id=access_key, aws_secret_access_key=secret_key)
 
     table_name = 'state_manager'
@@ -112,8 +112,8 @@ def ask_for_previous_recommendation(email, session_attributes, slots):
 def send_email_with_previous_recommendation(email):
     table_name = 'state_manager'
     region  = "us-east-1"
-    access_key  = "AKIAXYKJTRFYPMCPHQAJ"
-    secret_key     = "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"
+    access_key  = "acess_key"
+    secret_key     = "secret_key"
     # Initialize DynamoDB
     dynamodb_state = boto3.resource(
         'dynamodb',
@@ -230,8 +230,8 @@ def send_to_sqs(location, cuisine, people, dining_time, email, date):
     # Construct the message body with the relevant data
 
     regionName  = "us-east-1"
-    access_key  = "AKIAXYKJTRFYPMCPHQAJ"
-    api_key     = "gWFfGtqDL2tNolN70aX/17EuqbOLTre9wXN78K5H"
+    access_key  = "access_key"
+    api_key     = "acess_key"
     sqs_url = "https://sqs.us-east-1.amazonaws.com/533267188080/suggestdiningqueue"
 
     sqs = boto3.client (
