@@ -13,9 +13,9 @@ def lambda_handler(event, context):
 
     # Security Credentials and OpenSearch configuration
     region  = "us-east-1"
-    access_key  = "AKIAXYKJTRFYPMCPHQAJ"
-    secret_key     = "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"
-    host = "search-datahw1-ryccisgow2q4bkppx3varihlum.aos.us-east-1.on.aws"
+    access_key  = "access_key"
+    secret_key     = "secret_key"
+    host = "host"
     service = "es"
 
     #awsauth = AWS4Auth(access_key, secret_key, region, service)
