@@ -1,8 +1,8 @@
 aws s3 cp s3://elasticdatahw1/es_bulk_upload_restaurants.json .
 aws s3 cp s3://elasticdatahw1/es_bulk_upload_restaurants.json .
-curl -u Assignment1:Assignment1* -X PUT
-curl -XPUT -u Assignment1:Assignment1* https://search-datahw1-ryccisgow2q4bkppx3varihlum.aos.us-east-1.on.aws/restaurants/_bulk?pretty --data-binary @es_bulk__upload_restaurants.json -H 'Content-Type: application/json'
-curl -u Assignment1:Assignment1* -XGET "https://search-datahw1-ryccisgow2q4bkppx3varihlum.aos.us-east-1.on.aws/restaurants/_search?pretty" -H "Content-Type: application/json" -d '{
+curl -u username:password -X PUT
+curl -XPUT -u username:password https://search-datahw1-ryccisgow2q4bkppx3varihlum.aos.us-east-1.on.aws/restaurants/_bulk?pretty --data-binary @es_bulk__upload_restaurants.json -H 'Content-Type: application/json'
+curl -u username:password -XGET "https://search-datahw1-ryccisgow2q4bkppx3varihlum.aos.us-east-1.on.aws/restaurants/_search?pretty" -H "Content-Type: application/json" -d '{
   "query": {
     "match": {
       "cuisine_type": "italian"
